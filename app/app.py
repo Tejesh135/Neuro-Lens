@@ -9,7 +9,7 @@ model = load_model('mlp_model.h5')
 preprocessor = joblib.load('preprocessor.save')
 
 # --- Configure Gemini API key ---
-genai.configure(api_key="AIzaSyCeKFco-Crl5XaOvMkNPIpy7_DIRLa5nmw")
+genai.configure(api_key="")
 
 st.set_page_config(page_title="Student Depression Prediction & Chatbot")
 
@@ -99,5 +99,6 @@ with tab2:
             st.markdown(f"**You:** {text}")
         else:
             st.markdown(f"**Gemini:** {text}")
+
 
     st.info("💡 Note: This chatbot is for supportive conversation and suggestions only. If you feel very distressed or need urgent help, please consult a professional or call a mental health helpline.")
